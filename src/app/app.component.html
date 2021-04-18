@@ -1,0 +1,15 @@
+
+<h2>Normal Form</h2>
+
+<form (ngSubmit)="onSubmit(f)" #f="ngForm"> 
+  <input
+name="email"
+ngModel
+required
+email
+>
+  <button [disabled]="!f.valid"type="submit">submit</button>
+</form>
+<hr>
+
+<h2>Reactive form Form</h2>
