@@ -1,5 +1,5 @@
 
-<h2>Normal Form</h2>
+<h2>Template driven Form</h2>
 
 <form (ngSubmit)="onSubmit(f)" #f="ngForm"> 
   <input
@@ -13,3 +13,11 @@ email
 <hr>
 
 <h2>Reactive  Form</h2>
+
+
+<form  [formGroup]="reactiveForm" (ngSubmit)="onSubmitReactive()"> 
+  <input
+formControlName="reactive_email"
+>
+  <button [disabled]="!reactiveForm.valid" type="submit">submit</button>
+</form>
